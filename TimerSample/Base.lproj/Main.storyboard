@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,52 +13,60 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kalan Zaman: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1e-zK-tQg">
-                                <rect key="frame" x="106" y="114" width="202" height="43"/>
+                                <rect key="frame" x="50" y="208" width="328" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSB-SE-TRg">
-                                <rect key="frame" x="144" y="234" width="114" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="iyA-BR-dlx"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Başlat"/>
-                                <connections>
-                                    <action selector="startBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrC-cC-eCR"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mDY-ht-frz">
-                                <rect key="frame" x="97" y="367" width="187" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mDY-ht-frz">
+                                <rect key="frame" x="40" y="84" width="348" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZm-EC-0uc">
-                                <rect key="frame" x="144" y="472" width="114" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZm-EC-0uc">
+                                <rect key="frame" x="100" y="153" width="228" height="30"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Seç">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="chooseTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vST-eM-dTD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSB-SE-TRg">
+                                <rect key="frame" x="100" y="257" width="228" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Başlat">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrC-cC-eCR"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gSB-SE-TRg" secondAttribute="bottom" constant="590" id="E0Y-6Q-81D"/>
-                            <constraint firstItem="gSB-SE-TRg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="Glh-VL-jO0"/>
-                            <constraint firstItem="a1e-zK-tQg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="Jpi-jJ-Ay5"/>
-                            <constraint firstItem="a1e-zK-tQg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="Rff-Mp-bM2"/>
-                            <constraint firstItem="gSB-SE-TRg" firstAttribute="top" secondItem="a1e-zK-tQg" secondAttribute="bottom" constant="77" id="f1U-02-dXL"/>
-                            <constraint firstItem="a1e-zK-tQg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fYH-Iv-b6i"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gSB-SE-TRg" secondAttribute="trailing" constant="156" id="lvW-Q3-6nJ"/>
+                            <constraint firstItem="mDY-ht-frz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="2oI-py-Hpm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a1e-zK-tQg" secondAttribute="trailing" constant="50" id="6fa-2e-bRx"/>
+                            <constraint firstItem="BZm-EC-0uc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="ClA-tj-nr0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gSB-SE-TRg" secondAttribute="trailing" constant="100" id="Hzu-RT-hSR"/>
+                            <constraint firstItem="a1e-zK-tQg" firstAttribute="top" secondItem="BZm-EC-0uc" secondAttribute="bottom" constant="25" id="Jw0-Nu-zVk"/>
+                            <constraint firstItem="BZm-EC-0uc" firstAttribute="top" secondItem="mDY-ht-frz" secondAttribute="bottom" constant="25" id="OG6-3u-jWF"/>
+                            <constraint firstItem="a1e-zK-tQg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ON2-i1-aef"/>
+                            <constraint firstItem="gSB-SE-TRg" firstAttribute="top" secondItem="a1e-zK-tQg" secondAttribute="bottom" constant="35" id="Q2f-hK-9Pb"/>
+                            <constraint firstItem="gSB-SE-TRg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="ZIy-TR-JFf"/>
+                            <constraint firstItem="mDY-ht-frz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ZdX-mL-hRp"/>
+                            <constraint firstItem="BZm-EC-0uc" firstAttribute="top" secondItem="mDY-ht-frz" secondAttribute="bottom" constant="35" id="lYY-Sp-zKv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BZm-EC-0uc" secondAttribute="trailing" constant="100" id="m7S-NG-Yl9"/>
+                            <constraint firstItem="gSB-SE-TRg" firstAttribute="top" secondItem="a1e-zK-tQg" secondAttribute="bottom" constant="25" id="qFz-Wm-SIs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mDY-ht-frz" secondAttribute="trailing" constant="40" id="x4N-27-85d"/>
                         </constraints>
                     </view>
                     <connections>
@@ -68,12 +76,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+            <point key="canvasLocation" x="27.536231884057973" y="68.303571428571431"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
