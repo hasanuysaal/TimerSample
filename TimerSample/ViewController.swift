@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         timeLabel.text = "Kalan zaman: \(remainTime)"
         
     }
-
     
     @IBAction func chooseTime(_ sender: Any) {
         
@@ -32,7 +31,21 @@ class ViewController: UIViewController {
     
     @IBAction func startBtn(_ sender: Any) {
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunc), userInfo: nil, repeats: true)
+        if remainTime != 0 {
+            
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerFunc), userInfo: nil, repeats: true)
+            
+        } else {
+            
+            let alertMsg = UIAlertController(title: "Hata", message: "Giriş değeri 0'dan farklı ve sayısal bir değer olmalıdır!", preferredStyle: .alert)
+            let alertBtn = UIAlertAction(title: "OK", style: .cancel) { UIAlertAction in
+                print("Hata")
+            }
+            
+            self.present(alertMsg, animated: true, completion: nil)
+            alertMsg.addAction(alertBtn)
+            
+        }
         
     }
     
